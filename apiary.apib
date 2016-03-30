@@ -1,0 +1,91 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# Doku Shop API
+
+Doku Shop API adalah sebuah API sederhana untuk aplikasi android Doku Shop
+
+## Koleksi Merek [/merek]
+
+### Daftar Semua Merek [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "nama_merek": "Apple",
+                "model": []
+            },
+            {
+                "nama_merek": "Asus",
+                "model": ["Nexus 7"]
+            },
+            {
+                "nama_merek": "Blackberry",
+                "model": []
+            },
+            {
+                "nama_merek": "HTC",
+                "model": []
+            },
+            {
+                "nama_merek": "Huawei",
+                "model": ["Ascend D1"]
+            },
+            {
+                "nama_merek": "Lenovo",
+                "model": []
+            },
+            {
+                "nama_merek": "LG",
+                "model": []
+            },
+            {
+                "nama_merek": "Nokia",
+                "model": []
+            },
+            {
+                "nama_merek": "Oppo",
+                "model": []
+            }
+        ]
+        
+## Koleksi Aksesoris [/aksesoris]
+
+### Daftar Semua Aksesoris [GET /aksesoris/{nama_merek}/{model}]
+
++ Response 200 (application/json)
+        [
+            {
+                "id_aksesoris": 1,
+                "nama_aksesoris": "Nillkin Crossed Style Leather Case",
+                "harga": 190000,
+                "image_path": "/image/aksesoris/Sony/XPeria Z/1.png"
+                
+            },
+            {
+                "id_aksesoris": 2,
+                "nama_aksesoris": "Nillkin Easy Series Leather Case",
+                "harga": 180000,
+                "image_path": "image/aksesoris/Sony/XPeria Z/2.png"
+            },
+            {
+                "id_aksesoris": 3,
+                "nama_aksesoris": "Nillkin Fresh Series Leather Case",
+                "harga": 150000,
+                "image_path": "image/aksesoris/Sony/XPeria Z/3.png"
+            },
+            {
+                "id_aksesoris": 4,
+                "nama_aksesoris": "Nillkin Hardcase",
+                "harga": 135000,
+                "image_path": "image/aksesoris/Sony/XPeria Z/4.png"
+            }
+        ]
+
+### Daftar Pilihan Warna [GET /aksesoris/nama_merek/model/pilihan]
+
++ Response 200 (application/json)
+        [
+            "purple"
+        ]
