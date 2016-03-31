@@ -105,13 +105,15 @@ Mengembalikan daftar pilihan aksesoris dengan id tertentu
 + Parameters
     + nama_merek: Sony - Merk HP
     + model: XPeria Z - model HP
-    + id: '1' - ID aksesoris
+    + id: 1 - ID aksesoris
 
 + Response 200 (application/json)
 
         [
             "purple"
         ]
+
++ Response 404
 
 ##Koleksi Image [/image]
 ### Gambar [GET /image/aksesoris/{nama_merek}/{model}/{nama_file}]
@@ -123,4 +125,4 @@ Mengembalikan gambar. URI di atas seharusnya sesuai dengan image_path yang diber
     + model: XPeria Z - model HP
     + nama_file: 1.png - ID aksesoris
 
-+ Response 200 (image)
++ Response 200 (image/{jpg/png})
