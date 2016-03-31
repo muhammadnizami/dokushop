@@ -57,6 +57,10 @@ Doku Shop API adalah sebuah API sederhana untuk aplikasi android Doku Shop
 
 ### Daftar Semua Aksesoris [GET /aksesoris/{nama_merek}/{model}]
 
++ Parameters
+    + nama_merek: 'Sony' - Merk HP
+    + model: 'XPeria Z' - model HP
+
 + Response 200 (application/json)
 
         [
@@ -90,6 +94,11 @@ Doku Shop API adalah sebuah API sederhana untuk aplikasi android Doku Shop
 
 ### Daftar Pilihan [GET /aksesoris/{nama_merek}/{model}/{id}/pilihan]
 
++ Parameters
+    + nama_merek: 'Sony' - Merk HP
+    + model: 'XPeria Z' - model HP
+    + id: '1' - ID aksesoris
+
 + Response 200 (application/json)
 
         [
@@ -97,6 +106,11 @@ Doku Shop API adalah sebuah API sederhana untuk aplikasi android Doku Shop
         ]
 
 ##Koleksi Image [/image]
-### Gambar [GET /image/aksesoris/{nama_merk}/{model}/{nama_file}]
+### Gambar [GET /image/aksesoris/{nama_merek}/{model}/{nama_file}]
+
++ Parameters
+    + nama_merek: 'Sony' - Merk HP
+    + model: 'XPeria Z' - model HP
+    + nama_file: '1.png' - ID aksesoris
 
 + Response 200 (image)
