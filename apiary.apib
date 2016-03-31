@@ -1,5 +1,4 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
 
 # Doku Shop API
 
@@ -47,14 +46,19 @@ Doku Shop API adalah sebuah API sederhana untuk aplikasi android Doku Shop
             {
                 "nama_merek": "Oppo",
                 "model": []
+            },
+            {
+                "nama_merek": "Sony",
+                "model": ["XPeria Z"]
             }
         ]
-        
+
 ## Koleksi Aksesoris [/aksesoris]
 
 ### Daftar Semua Aksesoris [GET /aksesoris/{nama_merek}/{model}]
 
 + Response 200 (application/json)
+
         [
             {
                 "id_aksesoris": 1,
@@ -83,9 +87,16 @@ Doku Shop API adalah sebuah API sederhana untuk aplikasi android Doku Shop
             }
         ]
 
-### Daftar Pilihan Warna [GET /aksesoris/nama_merek/model/pilihan]
+
+### Daftar Pilihan [GET /aksesoris/{nama_merek}/{model}/{id}/pilihan]
 
 + Response 200 (application/json)
+
         [
             "purple"
         ]
+
+##Koleksi Image [/image]
+### Gambar [GET /image/aksesoris/{nama_merk}/{model}/{nama_file}]
+
++ Response 200 (image)
