@@ -6,7 +6,11 @@ Doku Shop API adalah sebuah API sederhana untuk aplikasi android Doku Shop
 
 ## Koleksi Merek [/merek]
 
+Ini menyangkut seluruh merek dan model HP
+
 ### Daftar Semua Merek [GET]
+
+Mengembalikan daftar merek dan daftar model dari setiap merek
 
 + Response 200 (application/json)
 
@@ -57,6 +61,12 @@ Doku Shop API adalah sebuah API sederhana untuk aplikasi android Doku Shop
 
 ### Daftar Semua Aksesoris [GET /aksesoris/{nama_merek}/{model}]
 
+Mengembalikan aksesoris untuk merek dan model tertentu. Di dalamnya termasuk id_aksesoris dan image_path. id_aksesoris digunakan untuk mengakses apa saja pilihan untuk aksesoris tersebut. image_path digunakan untuk mengakses gambar.
+
++ Parameters
+    + nama_merek: 'Sony' - Merk HP
+    + model: 'XPeria Z' - model HP
+
 + Response 200 (application/json)
 
         [
@@ -90,6 +100,13 @@ Doku Shop API adalah sebuah API sederhana untuk aplikasi android Doku Shop
 
 ### Daftar Pilihan [GET /aksesoris/{nama_merek}/{model}/{id}/pilihan]
 
+Mengembalikan daftar pilihan aksesoris dengan id tertentu
+
++ Parameters
+    + nama_merek: 'Sony' - Merk HP
+    + model: 'XPeria Z' - model HP
+    + id: '1' - ID aksesoris
+
 + Response 200 (application/json)
 
         [
@@ -97,6 +114,13 @@ Doku Shop API adalah sebuah API sederhana untuk aplikasi android Doku Shop
         ]
 
 ##Koleksi Image [/image]
-### Gambar [GET /image/aksesoris/{nama_merk}/{model}/{nama_file}]
+### Gambar [GET /image/aksesoris/{nama_merek}/{model}/{nama_file}]
+
+Mengembalikan gambar. URI di atas seharusnya sesuai dengan image_path yang diberikan dari koleksi aksesoris
+
++ Parameters
+    + nama_merek: 'Sony' - Merk HP
+    + model: 'XPeria Z' - model HP
+    + nama_file: '1.png' - ID aksesoris
 
 + Response 200 (image)
