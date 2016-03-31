@@ -118,11 +118,15 @@ Mengembalikan daftar pilihan aksesoris dengan id tertentu
 ##Koleksi Image [/image]
 ### Gambar [GET /image/aksesoris/{nama_merek}/{model}/{nama_file}]
 
-Mengembalikan gambar. URI di atas seharusnya sesuai dengan image_path yang diberikan dari koleksi aksesoris
+Mengembalikan gambar. URI di atas seharusnya sesuai dengan image_path yang diberikan dari koleksi aksesoris.
+
+Note: saat diuji coba dengan dredd, akan fail karena tidak mendukung image
 
 + Parameters
     + nama_merek: Sony - Merk HP
     + model: XPeria Z - model HP
     + nama_file: 1.png - ID aksesoris
+    
++ Response 200 (image/png)
 
-+ Response 200 (image/{jpg/png})
+        ‰PNG XXXXXXXXXXXXFZFZGEDHDSRGFEThERGEDFG
